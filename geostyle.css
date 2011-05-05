@@ -1,0 +1,73 @@
+body { background: #fff; margin: 0 }
+h1, h2, hr, br { clear: both; }
+p, h1, h2, h3, h4 { padding: 0 5% }
+h1 { width: 100%; background: #dcf; 
+	padding: 1.5em 0.1em 0.1em; margin:0; 
+	border-bottom: solid 0.3em #555 }
+h2 { width: 98%; margin: 1em auto 0.4em; padding: 0.2em 0.1em 0; border-bottom: solid #888 0.1em; background: #eef }
+ul { margin: 0; padding: 0; font-family: sans-serif }
+li { list-style: none; color: #444; }
+li:hover { overflow: visible; color: #000; }
+
+#eras {  position: relative; top: 0; left: 0 }
+.era {
+	font-size: 10pt;
+	text-align: left;
+	float: left;
+	margin: 0;
+	text-align: center;
+	
+}
+.period {
+	text-align: left;
+	float: left;
+	margin: 2em 0;
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+	top: 0;
+	background: #f0f0e8;
+	height: 2em;
+	cursor: default;
+}
+.shown {
+	background: #c0c0e8;
+	}
+.period .ended {
+	position: relative; 
+	top: -4.7em;
+	left: 9px; 
+	float: right; 
+	padding: 0.2em 0.2em 14px;
+	background: transparent url("./geo-pointer.png") no-repeat scroll right bottom;
+}
+
+
+.mya, .began {
+	background: #aa7; 
+	height: 1.2em;
+	padding: 0.1em;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#paleozoic { width: 60%; background: #80b5d5 }
+.era ul { width: 98%; margin: 0 auto }
+#paleozoic li { width: 16%; }
+#cambrian {  }
+#ordovician {  }
+#mesozoic {	width:28%; background: #8fad81 }
+#mesozoic li { width: 32% }
+#cenozoic {	width: 11%; background: #dfdf30 }
+#cenozoic li { 	width: 50% }
+dt {font-size: 10pt; }
+#eras dd .about { position: absolute; top: 3em; left: 0; width: 9em; font-size: 10pt; text-align: left; margin:0; padding: 0.2em; background: #ddd0bd; }
+#about-area { background: #b8d8c8; width: 100%; font: 10pt sans-serif}
+#about-area h4 { 
+	font-weight: bold; 
+	font-size: 100%; 
+	color: #666;
+	
+}
+#about-illustration { background: #fff; float: right; width: 20%; height: 4em; margin: 10px; }
+#links li { list-style: circle inside; }
