@@ -1,0 +1,22 @@
+#sidebyside {
+	position: relative;
+	top: 0;
+}
+#details {
+	position: absolute;
+	width: 50%;
+	top: 0;
+	right: 0;
+	background: #abf;
+}
+#main-list {
+	width: 50%;
+}
+#eons .hidden {
+	display: none;
+}
+#eons .shown {
+	display: block;
+
+}
+#eons dd { display: none; }

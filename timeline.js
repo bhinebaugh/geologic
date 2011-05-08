@@ -1,12 +1,16 @@
+g = 0;
 $(document).ready( function() {
-	console.log("i am alive!");
-	$('#eons').find('ul').hide();
+	$('#eons').find('ol').hide();
 	$('.era').click( function() { 
 		console.log("expand/collapse"); 
-		if ( $(this).find('ul:first').css('display') == 'none' ) {
-			$(this).children('ul').show() 
+		if ( $(this).find('ol:first').css('display') == 'none' ) {
+			g++;
+			$(this).children('ol').show() ;
+			//hide OL by adding/removing a class instead
+			$('#details h2').html("About the "+$(this).find('dt')[0].innerHTML);
+			$('#description').html($(this).find('dd:first')[0].innerHTML)
 		} else {
-			$(this).children('ul').hide();
+			$(this).children('ol').hide();
 		}
 		return false;
 	});
