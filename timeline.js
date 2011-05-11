@@ -1,23 +1,23 @@
 $(document).ready( function() {
 	// in the list #eons, hide any child lists
-	//$('#eons').find('ol').hide(); //makes dd's show on dt-mouseout
+	$('.shown').hide();
+	$('#eons').find('ol').hide(); //makes dd's show on dt-mouseout
 	// set the descriptions for each list item (i.e. a dd element) to (hidden?)
 	// and toggle the class to display them in the sidebar on mouseover
 	//$('#eons').find('ol').hide();
 	$('#eons dt').hover( 
 		function(){
-			$(this).next().addClass('shown');
+			$(this).next().show();
 			return false;
 		},
 		function() {
-			$(this).next().removeClass('shown');
+			$(this).next().hide();
 			return false;
 		}
 	);
 	
 	//expand eras when clicked, and show child list	
 	$('.era').click( function() { 
-		console.log("era clicked"); 
 		if ( $(this).find('ol:first').css('display') == 'none' ) {
 			$(this).children('ol').show() ;
 			//hide OL by adding/removing a class instead
@@ -30,12 +30,5 @@ $(document).ready( function() {
 		}
 		return false;
 	});
-	//show details of period when clicked or hovered
-	/*
-	$('.period').click( function() {
-		d = $(this).find('dd');
-		console.log(d);
-		d.toggleClass('shown');
-		return false;
-	}); */
+	$('.period').click( function() { return false; /**prevent the click event from going to parent and hiding this element**/ });
 });
