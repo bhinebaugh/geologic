@@ -4,13 +4,13 @@
 <title>Geologic Periods</title>
 <!--
 Objective: show the relationships (sequence and duration) of the major geological periods and significant events of each;
-		help order the earth's past in the minds of the readers
+	help order the earth's past in the minds of the readers
 		
 have one hierarchical list that will display properly without styles or javascript
 show an overview strip at top
 show a detail strip below that focuses on an era that is clicked in the overview (zoom in?)
 -->
-<link rel="stylesheet" href="geostyle2.css" />
+<link rel="stylesheet" href="geostyle.css" />
 <script src="../scripts/jquery-1.3.2.js" type="text/javascript"></script>
 <script src="timeline.js"></script>
 </head>
@@ -22,51 +22,90 @@ show a detail strip below that focuses on an era that is clicked in the overview
 These are known as geologic periods. ... grouped into eras, periods and epochs.</p>
 <p>The Earth is about 4.7 billion years old.</p>
 -->
+<div id="fixed-header">
+<p id="caption"><span>earliest &lsth;-----</span> Earth's History (~4500 million years) <span>-----&grth; most recent</span></p>
+<div id="viewport">
+<div id="horizontal-ribbon">
+	<p id="r-had" class="timeline hadean">Hadean</p>
+	<p id="r-arc" class="timeline archean">Archean</p>
+	<p id="r-pro" class="timeline proterozoic">Proterozoic</p>
+	<p id="r-cam" class="timeline cambrian">Cam</p>
+	<p id="r-ord" class="timeline ordovician">Ord</p>
+	<p id="r-sil" class="timeline silurian">Sil</p>
+	<p id="r-dev" class="timeline devonian">Dev</p>
+	<p id="r-car" class="timeline carboniferous">Car</p>
+	<p id="r-per" class="timeline permian">Per</p>
+	<p id="r-tri" class="timeline triassic">Tri</p>
+	<p id="r-jur" class="timeline jurassic">Jur</p>
+	<p id="r-cre" class="timeline cretaceous">Cre</p>
+	<p id="r-pal" class="timeline paleogene">Pal</p>
+	<p id="r-neo" class="timeline neogene">Neo</p>
+	<p id="r-qua" class="timeline quaternary">Qua</p>
+</div>
+</div>
+</div>
 <div id="sidebyside">
 <div id="main-list">
 <h2>Eons</h2>
-<p><span id="showall">Show All</span> | <span id="hideall">Hide All</a></span>
+<p class="fineprint">[ <span id="showall" class="button">Show All</span> | <span id="hideall" class="button">Hide All</a></span> ] [ <span id="make-plain" class="button">View Plain List</span> ]</p>
 <ol id="eons">
-	<li class="era"><dt>Precambrian</dt><dd class="about shown">Long ago and poorly understood, mostly the domain of unicellular life.</dd>
+	<li class="era"><dt class="precambrian">Precambrian</dt><dd class="about shown">Long ago and poorly understood, mostly the domain of unicellular life.</dd>
 		<ol>
-		<li class="period"><dt>Hadean</dt><dd class="shown">About the Hadean</dd></li>
-		<li class="period"><dt>Archean</dt><dd class="shown">About the Archean</dd></li>
-		<li class="period"><dt>Proterozoic</dt><dd class="shown">Ediacaran fauna</dd></li>
+		<li class="period"><dt class="hadean">Hadean</dt><dd class="shown">About the Hadean</dd></li>
+		<li class="period"><dt class="archean">Archean</dt><dd class="shown">About the Archean</dd></li>
+		<li class="period"><dt class="proterozoic">Proterozoic</dt><dd class="shown">Ediacaran fauna</dd></li>
 		</ol>
 	</li>
-	<li class="era"><dt>Phanerozoic ("visible life")</dt><dd class="shown">Contains the eras shown in the graph below.</dd>
+	<li class="era"><dt class="phanerozoic">Phanerozoic ("visible life")</dt><dd class="shown">Contains the eras shown in the graph below.</dd>
 		<ol>
-		<li id="paleozoic" class="era"><dt>Paleozoic<span class="transl"> ("ancient life")</span></dt>
+		<li class="era"><dt class="paleozoic">Paleozoic<span class="transl"> ("ancient life")</span></dt>
 			<dd class="about shown">marine invertebrates</dd>
 			<ol>
-			<li class="period" id="cambrian"><dt>Cambrian</dt>
-				<dd class="shown"><p class="ended">500 mya</p>
+			<li class="period"><dt class="cambrian">Cambrian</dt>
+				<dd class="shown"><p class="timespan">542 - 488 million years ago</p>
 				<p class="about">multicellular life arises? witnessed radiation of new life forms</p></dd></li>
-			<li class="period" id="ordovician"><dt>Ordovician</dt>
-				<dd class="shown"><p class="ended">430 mya</p><p class="about">first vertebrates: fish</p></dd></li>
-			<li class="period"><dt>Silurian</dt>
-				<dd class="shown"><p class="ended">395 mya</p><p class="about">land plants</p></dd></li>
-			<li class="period"><dt>Devonian</dt>
-				<dd class="shown"><p class="ended">345 mya</p><p class="about">amphibians, insects</p></dd></li>
-			<li class="period"><dt>Carboniferous</dt>
-				<dd class="shown"><p class="ended">280 mya</p></dd></li>
-			<li class="period"><dt>Permian</dt>
-				<dd class="shown"><p class="ended">225 mya</p><p class="about">reptiles</p></dd></li>
+			<li class="period"><dt class="ordovician">Ordovician</dt>
+				<dd class="shown"><p class="timespan">488 - 444 million years ago</p><p class="about">first vertebrates: fish</p></dd></li>
+			<li class="period"><dt  class="silurian">Silurian</dt>
+				<dd class="shown"><p class="timespan">444 - 416 (395) million years ago</p><p class="about">land plants</p></dd></li>
+			<li class="period"><dt class="devonian">Devonian</dt>
+				<dd class="shown"><p class="timespan"> 416 - 359  (345) million years ago</p><p class="about">amphibians, insects</p></dd></li>
+			<li class="period"><dt class="carboniferous">Carboniferous</dt>
+				<dd class="shown"><p class="timespan"> 359 - 299 (280) million years ago</p></dd></li>
+			<li class="period"><dt class="permian">Permian</dt>
+				<dd class="shown"><p class="timespan">299 - 251 (225) million years ago</p><p class="about">reptiles</p></dd></li>
 			</ol>
 		</li>
-		<li id="mesozoic" class="era"><dt>Mesozoic<span class="transl"> ("middle life")</span></dt>
+		<li class="era"><dt class="mesozoic">Mesozoic<span class="transl"> ("middle life")</span></dt>
 			<dd class="about shown">Gymnosperms (conifers, cycads, ginkgoes)</dd>
 			<ol>
-			<li class="period"><dt>Triassic</dt><dd class="shown"><p class="ended"><span class="bg">190 mya</p><p class="about">early dinosaurs, mammal-like reptiles</span></p></dd></li>
-			<li class="period"><dt>Jurassic</dt><dd class="shown"><p class="ended"><span class="bg">136 mya</p><p class="about">flying reptiles, first birds</span></p></dd></li>
-			<li class="period"><dt>Cretaceous</dt><dd class="shown"><p class="ended"><span class="bg">65 mya</p><p class="about">end of dinosaurs</span></p></dd></li>
+			<li class="period"><dt class="triassic">Triassic</dt><dd class="shown"><p class="timespan">251 - 200 million years ago</p><p class="about">early dinosaurs, mammal-like reptiles</p></dd></li>
+			<li class="period"><dt class="jurassic">Jurassic</dt><dd class="shown"><p class="timespan">200 - 145 million years ago</p><p class="about">flying reptiles, first birds</p></dd></li>
+			<li class="period"><dt class="cretaceous">Cretaceous</dt><dd class="shown"><p class="timespan">145 - 65 million years ago</p><p class="about">end of dinosaurs</p></dd></li>
 			</ol>
 		</li>
-		<li id="cenozoic" class="era"><dt>Cenozoic<span class="transl"> ("recent life")</span></dt>
+		<li class="era"><dt class="cenozoic">Cenozoic<span class="transl"> ("recent life")</span></dt>
 			<dd class="about shown">The Cenozoic is the most recent geologic era, including the present epoch, the Holocene(?)</dd>
 			<ol>
-			<li class="period"><dt>Tertiary</dt><dd class="shown"><p class="ended"><span class="bg">2.5 mya</p><p class="about">hello mammals. flowering plants (angiosperms) proliferate. subdivided into several Epochs</span></p></dd></li>
-			<li class="period"><dt>Quaternary</dt><dd class="shown"><p class="ended"><span class="bg">present</p><p class="about">contains the Pleistocene and Recent epochs, featuring humans</span></p></dd></li>
+			<li class="period"><dt class="paleogene">Paleogene</dt><dd class="shown"><p class="timespan">65 - 23 million years ago</p><p class="about">hello mammals. flowering plants (angiosperms) proliferate. subdivided into several Epochs</p></dd>
+				<ol>
+				<li class="epoch">Paleocene</li>
+				<li class="epoch">Eocene</li>
+				<li class="epoch">Oligocene</li>
+				</ol>
+			</li>
+			<li class="period"><dt class="neogene">Neogene</dt><dd class="shown"><p class="timespan">23 - 2.6 million years ago</p><p class="about">More of the same</p></dd>
+				<ol>
+				<li class="epoch">Miocene</li>
+				<li class="epoch">Pliocene</li>
+				</ol>
+			</li>
+			<li class="period"><dt class="quaternary">Quaternary</dt><dd class="shown"><p class="timespan">2.6 million years ago - present</p><p class="about">contains the Pleistocene and Recent epochs, featuring humans</p></dd>
+				<ol>
+				<li class="epoch">Pleistocene</li>
+				<li class="epoch">Holocene</li>
+				</ol>
+			</li>
 			</ol>
 		</li>
 		</ol>
@@ -78,5 +117,7 @@ These are known as geologic periods. ... grouped into eras, periods and epochs.<
 <ul id="links">
 <li><a href="http://pubs.usgs.gov/gip/2008/58/">USGS Spiral of Time</a></li>
 <li><a href="http://www.pbs.org/wgbh/nova/evolution/brief-history-life.html">NOVA interactive timeline</a></li>
+<li><a href="http://www.chronos.org">CHRONOS website, tower of time?</a></li>
+<li><a href="http://paleobiology.si.edu/geotime/main/index.html">Smithsonian: National Museum of Natural History timeline (in Flash)</a></li>
 </ul></body>
 </html>

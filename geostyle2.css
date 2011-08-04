@@ -1,3 +1,28 @@
+.button {
+	cursor: pointer;
+	font-size: 80%;
+}
+#eons ol {
+	list-style: none;
+}
+#viewport {
+	width: 90%;
+	overflow: hidden;
+	border: #69c 2px solid;
+	margin: 5px;
+
+}
+#horizontal-ribbon {
+	width: 100%;
+	margin: 10px;
+	position: relative;
+	left: 0;
+}
+#ribbon {
+	margin: 0 auto;
+	padding: 10px;
+	text-align: center;
+}
 #sidebyside {
 	position: relative;
 	top: 0;
@@ -7,18 +32,22 @@
 #main-list {
 	width: 50%;
 }
+.greyed {
+	color: #888;
+	cursor: default;
+}
 .hideme {
 	display: none;
 }
 .shown {
 	display: block;
 	position: fixed;
-	width: 50%;
-	top: 10px;
+	width: 45%;
+	top: 15px;
 	right: 10px;
-	background: #a85;
 	border: solid 2px #975;
 	padding: 0.5em;
+	background: #e0e5ea;
 }
 .child-shown {
 	display: block;

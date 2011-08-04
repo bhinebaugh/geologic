@@ -1,67 +1,134 @@
 body { background: #fff; margin: 0 }
 h1, h2, hr, br { clear: both; }
-p, h1, h2, h3, h4 { padding: 0 5% }
+
 h1 { width: 100%; background: #dcf; 
 	padding: 1.5em 0.1em 0.1em; margin:0; 
 	border-bottom: solid 0.3em #555 }
-h2 { width: 98%; margin: 1em auto 0.4em; padding: 0.2em 0.1em 0; border-bottom: solid #888 0.1em; background: #eef }
+h2 { width: 100%; margin: 0; padding: 0.2em 0.1em 0; border-bottom: solid #888 0.1em; background: #eef }
 ul { margin: 0; padding: 0; font-family: sans-serif }
 li { list-style: none; color: #444; }
 li:hover { overflow: visible; color: #000; }
-
-#eras {  position: relative; top: 0; left: 0 }
-.era {
-	font-size: 10pt;
-	text-align: left;
-	float: left;
-	margin: 0;
-	text-align: center;
-	
-}
-.period {
-	text-align: left;
-	float: left;
-	margin: 2em 0;
+#fixed-header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	background: #554440;
 	padding: 0;
+	z-index: 500;
+}
+#caption {
+	margin: 0 auto;
+	text-align: center;
+	font-size: 0.75em;
+	color: #999;
+}
+#horizontal-ribbon {
+	width: 100%;
+	margin: 0;
+	position: relative;
+	left: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 60%;
+}
+#viewport {
 	overflow: hidden;
+	border: #69c 2px solid;
+	margin: 5px;
+}
+
+#sidebyside {
 	position: relative;
 	top: 0;
+}
+#main-list {
+	width: 50%;
+}
+#eons {
+	font-size: 10pt;
+}
+#eons ol {
+	list-style: none;
+}
+#eons li { }
+#eons .arrows { 	
+	background: url(pointers.png);
+	width: 22px;
+	height: 30px;
+	overflow: hidden;
+	display: block;
+	float: left;
+}
+.period, .epoch {
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 	background: #f0f0e8;
-	height: 2em;
 	cursor: default;
 }
-.shown {
-	background: #c0c0e8;
-	}
-.period .ended {
-	position: relative; 
-	top: -4.7em;
-	left: 9px; 
-	float: right; 
-	padding: 0.2em 0.2em 14px;
-	background: transparent url("./geo-pointer.png") no-repeat scroll right bottom;
+.precambrian { background: #b0c4d8 }
+.hadean { background: #809090 }
+.archean { background: #99adac }
+.proterozoic { background: #ccd891 }
+
+.phanerozoic { background: #b3e2d1 }
+.paleozoic {  background: #80b5d5 }
+.cambrian { background: #fb805f }
+.ordovician { background: #f981a6 }
+.silurian { background: #b172b6 }
+.devonian { background: #9999c9 }
+.carboniferous { background: #8091ad }
+.permian { background: #67c6de }
+.mesozoic { background: #8fad81 }
+.triassic { background: #67c3b7 }
+.jurassic { background: #4db47e }
+.cretaceous { background: #7fc31c }
+.cenozoic { background: #dfdf30 }
+.paleogene { background: #ffb300 }
+.neogene { background: #fdcc8a }
+.quaternary { background: #ffff7f }
+
+.timeline { float: left; overflow: hidden; height: 1.5em; margin: 0; padding: 0 }
+#r-had { float:left; width: 0.04% }
+#r-arc { float:left; width: 37.5% }
+#r-pro { float:left; width: 48.95% }
+#r-cam { float:left; width: 1.35%}
+#r-ord { float:left; width: 1.1%}
+#r-sil { float:left; width: 0.7%}
+#r-dev { float:left; width: 1.425%}
+#r-car { float:left; width: 1.5%}
+#r-per { float:left; width: 1.2%}
+#r-tri { float:left; width: 1.225%}
+#r-jur { float:left; width: 1.375%}
+#r-cre { float:left; width: 2%}
+#r-pal { float:left; width: 1.05%}
+#r-neo { float:left; width: 0.51%}
+#r-qua { float:left; width: 0.065%}
+
+.era {
+	text-align: left;
+	margin: 0;
+	cursor: pointer;
+	background: url(pointers.png) left top no-repeat;
+	padding-left: 20px;
+	position: relative;
+	left: -20px;
 }
-
-
-.mya, .began {
-	background: #aa7; 
-	height: 1.2em;
-	padding: 0.1em;
+.open-arrow { background-position: -24px 0 }
+.era dt {
+	padding: 0.2em 
+}
+#eras dd .about {
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 4em; left: 0; 
+	width: 45%; 
+	text-align: left; 
+	margin:0; padding: 0.2em;
 }
-#paleozoic { width: 60%; background: #80b5d5 }
-.era ul { width: 98%; margin: 0 auto }
-#paleozoic li { width: 16%; }
-#cambrian {  }
-#ordovician {  }
-#mesozoic {	width:28%; background: #8fad81 }
-#mesozoic li { width: 32% }
-#cenozoic {	width: 11%; background: #dfdf30 }
-#cenozoic li { 	width: 50% }
-dt {font-size: 10pt; }
-#eras dd .about { position: absolute; top: 3em; left: 0; width: 9em; font-size: 10pt; text-align: left; margin:0; padding: 0.2em; background: #ddd0bd; }
+.timespan {
+	color: #888;
+	font-family: Helvetica, Arial, sans-serif;
+}
 #about-area { background: #b8d8c8; width: 100%; font: 10pt sans-serif}
 #about-area h4 { 
 	font-weight: bold; 
@@ -69,5 +136,31 @@ dt {font-size: 10pt; }
 	color: #666;
 	
 }
-#about-illustration { background: #fff; float: right; width: 20%; height: 4em; margin: 10px; }
 #links li { list-style: circle inside; }
+.button {
+	cursor: pointer;
+	font-size: 80%;
+}
+#details {
+}
+
+.greyed {
+	color: #888;
+	cursor: default;
+}
+.hideme {
+	display: none;
+}
+.shown {
+	display: block;
+	position: fixed;
+	width: 45%;
+	top: 60px;
+	right: 10px;
+	border: solid 2px #975;
+	padding: 0.5em;
+	background: #e0e5ea;
+}
+.child-shown {
+	display: block;
+}
