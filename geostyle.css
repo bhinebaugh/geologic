@@ -1,10 +1,13 @@
-body { background: #fff; margin: 0 }
+body { background: #fff; margin: 0; font-family: Georgia, serif }
 h1, h2, hr, br { clear: both; }
 
 h1 { width: 100%; background: #dcf; 
 	padding: 1.5em 0.1em 0.1em; margin:0; 
 	border-bottom: solid 0.3em #555 }
-h2 { width: 100%; margin: 0; padding: 0.2em 0.1em 0; border-bottom: solid #888 0.1em; background: #eef }
+h2 { width: 100%; margin: 0; padding: 0.2em 0.1em 0; border-bottom: solid #888 0.1em; background: #eef; color: #889 }
+a { color: #023; text-decoration: none; }
+a:hover { color: #045; }
+a:visited { color: #667; }
 ul { margin: 0; padding: 0; font-family: sans-serif }
 li { list-style: none; color: #444; }
 li:hover { overflow: visible; color: #000; }
@@ -42,6 +45,10 @@ li:hover { overflow: visible; color: #000; }
 }
 #main-list {
 	width: 50%;
+	font-family: Arial, sans-serif;
+}
+.fineprint {
+	margin: 10px 0 0 40px;
 }
 #eons {
 	font-size: 10pt;
@@ -136,7 +143,14 @@ li:hover { overflow: visible; color: #000; }
 	color: #666;
 	
 }
-#links li { list-style: circle inside; }
+#links {
+	margin: 0;
+	padding: 0 0 2px 5px;
+	border-bottom: 2px solid #d8dadf;
+}
+#links li { 
+	list-style: disc inside; 
+}
 .button {
 	cursor: pointer;
 	font-size: 80%;

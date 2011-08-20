@@ -37,8 +37,9 @@ $(document).ready( function() {
 	};
 	zoomTimeline = function(eraName) {
 		console.log("Zooming to "+eraName);
+		$('#r-'+eraName.slice(0,3)).toggleClass('overline');
 		if ( scaling[eraName] ) {
-			$('#horizontal-ribbon').css( scaling[eraName] );
+			$('#horizontal-ribbon').animate( scaling[eraName], "slow" );
 		} else {
 			console.log("not a key in scaling object");
 			return false;
