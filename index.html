@@ -17,7 +17,8 @@ show a detail strip below that focuses on an era that is clicked in the overview
 
 <body>
 <div id="fixed-header">
-<p id="caption"><span>earliest &lt;-----</span> Earth's History (~4500 million years) <span>-----&gt; most recent</span></p>
+	<h1>Earth's History</h1>
+<p id="caption"><span>earliest &lt;-----</span>  (~4.5 billion years) <span>-----&gt; most recent</span></p>
 <div id="viewport">
 <div id="horizontal-ribbon">
 	<p id="r-had" class="timeline hadean">Hadean</p>
@@ -48,7 +49,9 @@ These are known as geologic periods. ... grouped into eras, periods and epochs.<
 <div id="sidebyside">
 <div id="main-list">
 <h2>Eons</h2>
-<p class="fineprint">[ <span id="showall" class="button">Show All</span> | <span id="hideall" class="button">Hide All</a></span> ] [ <span id="make-plain" class="button">View Plain List</span> ]</p>
+<p class="fineprint"><button type="button" id="showall">Show All</button> <button id="hideall" type="button">Hide All</button> <button id="make-plain" type="button">View Plain List</button>
+	<span id="hint">Click on a era name name to see subcategories.</span></p>
+	<h3 id="about-bar">About the <span id="about-title">List</span></h3>
 <ol id="eons">
 	<li class="era"><dt class="precambrian">Precambrian</dt><dd class="about shown">Long ago and poorly understood, mostly the domain of unicellular life.</dd>
 		<ol>
@@ -57,9 +60,9 @@ These are known as geologic periods. ... grouped into eras, periods and epochs.<
 		<li class="period"><dt class="proterozoic">Proterozoic</dt><dd class="shown">Ediacaran fauna</dd></li>
 		</ol>
 	</li>
-	<li class="era"><dt class="phanerozoic">Phanerozoic ("visible life")</dt><dd class="shown">Contains the eras shown in the graph below.</dd>
+	<li class="era"><dt class="phanerozoic translatable">Phanerozoic<span class="transl"> "visible life"</span></dt><dd class="shown">Contains the eras shown in the graph below.</dd>
 		<ol>
-		<li class="era"><dt class="paleozoic">Paleozoic<span class="transl"> ("ancient life")</span></dt>
+		<li class="era"><dt class="paleozoic translatable">Paleozoic<span class="transl"> "ancient life"</span></dt>
 			<dd class="about shown">marine invertebrates</dd>
 			<ol>
 			<li class="period"><dt class="cambrian">Cambrian</dt>
@@ -77,7 +80,7 @@ These are known as geologic periods. ... grouped into eras, periods and epochs.<
 				<dd class="shown"><p class="timespan">299 - 251 (225) million years ago</p><p class="about">reptiles</p></dd></li>
 			</ol>
 		</li>
-		<li class="era"><dt class="mesozoic">Mesozoic<span class="transl"> ("middle life")</span></dt>
+		<li class="era"><dt class="mesozoic translatable">Mesozoic<span class="transl"> "middle life"</span></dt>
 			<dd class="about shown">Gymnosperms (conifers, cycads, ginkgoes)</dd>
 			<ol>
 			<li class="period"><dt class="triassic">Triassic</dt><dd class="shown"><p class="timespan">251 - 200 million years ago</p><p class="about">early dinosaurs, mammal-like reptiles</p></dd></li>
@@ -85,7 +88,7 @@ These are known as geologic periods. ... grouped into eras, periods and epochs.<
 			<li class="period"><dt class="cretaceous">Cretaceous</dt><dd class="shown"><p class="timespan">145 - 65 million years ago</p><p class="about">end of dinosaurs</p></dd></li>
 			</ol>
 		</li>
-		<li class="era"><dt class="cenozoic">Cenozoic<span class="transl"> ("recent life")</span></dt>
+		<li class="era"><dt class="cenozoic translatable">Cenozoic<span class="transl"> "recent life"</span></dt>
 			<dd class="about shown">The Cenozoic is the most recent geologic era, including the present epoch, the Holocene(?)</dd>
 			<ol>
 			<li class="period"><dt class="paleogene">Paleogene</dt><dd class="shown"><p class="timespan">65 - 23 million years ago</p><p class="about">hello mammals. flowering plants (angiosperms) proliferate. subdivided into several Epochs</p></dd>
@@ -114,9 +117,9 @@ These are known as geologic periods. ... grouped into eras, periods and epochs.<
 </ol>
 </div></div>
 <br style="clear:both" />
-<h2>Additonal Sources, Links, References</h2>
+<h2>Additonal Resources for Learning about Geologic History</h2>
 <ul id="links">
-<li><a href="http://pubs.usgs.gov/gip/2008/58/">USGS Spiral of Time</a></li>
+<li><a href="http://pubs.usgs.gov/gip/2008/58/">USGS Spiral of Time</a> A unique visualization that represents the long stretches of early eons well. Available as a poster.</li>
 <li><a href="http://www.pbs.org/wgbh/nova/evolution/brief-history-life.html">NOVA interactive timeline</a></li>
 <li><a href="http://www.chronos.org">CHRONOS website, tower of time?</a></li>
 <li><a href="http://paleobiology.si.edu/geotime/main/index.html">Smithsonian: National Museum of Natural History timeline (in Flash)</a></li>

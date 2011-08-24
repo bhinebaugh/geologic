@@ -10,6 +10,7 @@ var scaling = {
 $(document).ready( function() {
 	// set the descriptions for each list item (i.e. a dd element) to (hidden?)
 	$('.shown').hide();
+	$('.transl').hide();
 	hideOLs = function() {
 		// in the list #eons, hide any child lists
 		$('#eons').find('ol').hide();
@@ -28,6 +29,8 @@ $(document).ready( function() {
 		$('#hideall').removeClass('greyed');
 	});
 	showAbout = function(){
+			console.log("showing details of "+this.innerHTML);
+			$('#about-title').html(this.innerHTML);
 			$(this).next().show();
 			return false;
 	};
@@ -52,6 +55,10 @@ $(document).ready( function() {
 		hideAbout //mouseout
 	); */
 	$('dt').bind( 'mouseover', showAbout).bind( 'mouseout', hideAbout);
+	$('.translatable').hover( 
+		function(){ $(this).children().show() }, 
+		function(){ $(this).children().hide() }
+	);
 	$("#make-plain").click( function() {
 		$('.shown').show();
 		$('dd').removeClass('shown');
@@ -72,7 +79,7 @@ $(document).ready( function() {
 			dd1 = $(this).find('dd:first')[0]
 			$(dd1).toggleClass('child-shown');
 			// zoom timeline ribbon to the era in question
-			zoomTimeline( $(this.firstChild).attr('class') );
+			zoomTimeline( $(this.firstChild).attr('class').split(' ')[0] );
 		} else {
 			$(this).removeClass('open-arrow');
 			$('#showall').removeClass('greyed');
