@@ -1,10 +1,13 @@
 body {  background: #ddd; 
 	margin: 0; 
-	font-family: Georgia, Tahoma, serif; }
+	font-family: Georgia, Tahoma, serif;
+}
 h1, h2, hr, br { clear: both; }
 
-h1 { width: 100%; 
-background: url("skyline.jpg") no-repeat scroll center bottom #788FDD; 
+h1 {
+	width: 100%; 
+	background: url("skyline.jpg") no-repeat scroll center bottom #788FDD; 
+	box-sizing: border-box;
 	color: #333;
 	padding: 0.6em 0.1em 0; margin:0; 
 	border-bottom: solid 0.3em #555;
@@ -13,7 +16,7 @@ background: url("skyline.jpg") no-repeat scroll center bottom #788FDD;
 	letter-spacing: 2px;
 	line-height: 1em;
 	text-align: center; }
-h2 { width: 100%; margin: 0; padding: 0.2em 0.1em 0; border-bottom: solid #888 0.1em; background: #eef; color: #889 }
+h2 { width: 100%; margin: 0; padding: 0.2em 1rem; box-sizing: border-box; border-bottom: solid #888 0.1em; background: #eef; color: #889 }
 a { color: #023; text-decoration: none; }
 a:hover { color: #045; }
 a:visited { color: #667; }
@@ -22,9 +25,9 @@ li { list-style: none; color: #444; }
 li > dt:hover { overflow: visible; font-weight: bold; }
 #fixed-header {
 	width: 100%;
-	position: fixed;
+	position: sticky;
 	top: 0;
-	background: #c0c0c8;
+	background: #545457;
 	padding: 0;
 	z-index: 500;
 	border-bottom: 2px solid #9F989F;
@@ -46,15 +49,20 @@ li > dt:hover { overflow: visible; font-weight: bold; }
 #viewport {
 	overflow: hidden;
 	border: #79a 2px solid;
-	margin: 5px;
+	margin: 1rem;
 }
 
 #sidebyside {
-	margin: 10em 0 0 0;
+	margin: 0;
 	width: 100%;
 }
 #main-list {
-	background: url(rock.jpg) transparent top center repeat-x;
+	background-color: #ddd;
+	background-image:
+		linear-gradient(#cecdcb00,#b5a191),
+		url(rock.jpg);
+	background-repeat: no-repeat, repeat-x;
+	padding-bottom: 1rem;
 	width: 100%;
 }
 .shown {
@@ -162,6 +170,9 @@ li > dt:hover { overflow: visible; font-weight: bold; }
 	left: -20px;
 }
 .open-arrow { background-position: 0 -14px }
+dt {
+	box-shadow: 2px 4px 5px #5304;
+}
 .era dt {
 	padding: 0.2em 
 }
@@ -188,11 +199,12 @@ li > dt:hover { overflow: visible; font-weight: bold; }
 
 #links {
 	margin: 0;
-	padding: 0 0 2px 5px;
+	padding: 0.4rem 1rem;
 	border-bottom: 2px solid #d8dadf;
 }
 #links li { 
-	list-style: disc inside; 
+	list-style: disc inside;
+	padding: 0.25rem 0;
 }
 .button {
 	cursor: pointer;

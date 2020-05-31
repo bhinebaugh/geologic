@@ -16,29 +16,29 @@ show a detail strip below that focuses on an era that is clicked in the overview
 </head>
 
 <body>
-<div id="fixed-header">
-	<h1>Earth's History</h1>
-<p id="caption"><span>earliest &lt;-----</span>  (~4.5 billion years) <span>-----&gt; most recent</span></p>
-<div id="viewport">
-<div id="horizontal-ribbon">
-	<p id="r-had" class="timeline hadean">Hadean</p>
-	<p id="r-arc" class="timeline archean">Archean</p>
-	<p id="r-pro" class="timeline proterozoic">Proterozoic</p>
-	<p id="r-cam" class="timeline cambrian">Cam</p>
-	<p id="r-ord" class="timeline ordovician">Ord</p>
-	<p id="r-sil" class="timeline silurian">Sil</p>
-	<p id="r-dev" class="timeline devonian">Dev</p>
-	<p id="r-car" class="timeline carboniferous">Car</p>
-	<p id="r-per" class="timeline permian">Per</p>
-	<p id="r-tri" class="timeline triassic">Tri</p>
-	<p id="r-jur" class="timeline jurassic">Jur</p>
-	<p id="r-cre" class="timeline cretaceous">Cre</p>
-	<p id="r-pal" class="timeline paleogene">Pal</p>
-	<p id="r-neo" class="timeline neogene">Neo</p>
-	<p id="r-qua" class="timeline quaternary">Qua</p>
-</div>
-</div>
-</div>
+<header id="fixed-header">
+	<h1>Earth&#x2019;s History</h1>
+	<p id="caption"><span>earliest &lArr;</span>  (~4.5 billion years) <span>&rArr; most recent</span></p>
+	<div id="viewport">
+		<div id="horizontal-ribbon">
+			<p id="r-had" class="timeline hadean">Hadean</p>
+			<p id="r-arc" class="timeline archean">Archean</p>
+			<p id="r-pro" class="timeline proterozoic">Proterozoic</p>
+			<p id="r-cam" class="timeline cambrian">Cam</p>
+			<p id="r-ord" class="timeline ordovician">Ord</p>
+			<p id="r-sil" class="timeline silurian">Sil</p>
+			<p id="r-dev" class="timeline devonian">Dev</p>
+			<p id="r-car" class="timeline carboniferous">Car</p>
+			<p id="r-per" class="timeline permian">Per</p>
+			<p id="r-tri" class="timeline triassic">Tri</p>
+			<p id="r-jur" class="timeline jurassic">Jur</p>
+			<p id="r-cre" class="timeline cretaceous">Cre</p>
+			<p id="r-pal" class="timeline paleogene">Pal</p>
+			<p id="r-neo" class="timeline neogene">Neo</p>
+			<p id="r-qua" class="timeline quaternary">Qua</p>
+		</div>
+	</div>
+</header>
 <!--
 <h1>General Geologic Divisions</h1>
 <p>Scientists divide the history of the Earth into major groupings based on identifiable changes in the fossil record or rock strata. 
@@ -46,7 +46,7 @@ These are known as geologic periods. ... grouped into eras, periods and epochs.<
 <p>The Earth is about 4.7 billion years old.</p>
 -->
 
-<div id="sidebyside">
+<section id="sidebyside">
 <div id="main-list">
 <h2>Eons</h2>
 <p class="fineprint"><button type="button" id="showall">Show All</button> <button id="hideall" type="button">Hide All</button> <button id="make-plain" type="button">View Plain List</button>
@@ -115,13 +115,21 @@ These are known as geologic periods. ... grouped into eras, periods and epochs.<
 		</ol>
 	</li>
 </ol>
-</div></div>
-<br style="clear:both" />
-<h2>Additonal Resources for Learning about Geologic History</h2>
-<ul id="links">
-<li><a href="http://pubs.usgs.gov/gip/2008/58/">USGS Spiral of Time</a> A unique visualization that represents the long stretches of early eons well. Available as a poster.</li>
-<li><a href="http://www.pbs.org/wgbh/nova/evolution/brief-history-life.html">NOVA interactive timeline</a></li>
-<li><a href="http://www.chronos.org">CHRONOS website, tower of time?</a></li>
-<li><a href="http://paleobiology.si.edu/geotime/main/index.html">Smithsonian: National Museum of Natural History timeline (in Flash)</a></li>
-</ul></body>
+</div>
+</section>
+
+<section>
+	<h2>Additonal Resources for Learning about Geologic History</h2>
+	<ul id="links">
+	<li><a href="http://pubs.usgs.gov/gip/2008/58/">USGS Spiral of Geologic Time</a> A unique visualization that represents the long stretches of early eons well. Available as a poster.</li>
+	<li><a href="https://en.wikipedia.org/wiki/Timeline_of_the_evolutionary_history_of_life">Timeline of evolutionary history</a> on Wikipedia</li>
+	<li>NOVA interactive timeline—
+		available as a <a href="http://www.pbs.org/wgbh/nova/evolution/brief-history-life.html">Flash version</a>
+		and a <a href="https://www.pbs.org/wgbh/nova/link/hist_nf.html">plain HTML</a> version
+	</li>
+	<li><a href="http://paleobiology.si.edu/geotime/main/index.html">Smithsonian: National Museum of Natural History timeline (requires Flash player)</a></li>
+	</ul>
+</section>
+
+</body>
 </html>
