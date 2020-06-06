@@ -38,6 +38,7 @@ li > dt:hover { overflow: visible; font-weight: bold; }
 	font-size: 0.75em;
 	color: #999;
 }
+#all-eons,
 #horizontal-ribbon {
 	width: 100%;
 	margin: 0;
@@ -46,6 +47,10 @@ li > dt:hover { overflow: visible; font-weight: bold; }
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 60%;
 }
+#all-eons {
+	display: flex;
+}
+#linear,
 #viewport {
 	overflow: hidden;
 	border: #79a 2px solid;
