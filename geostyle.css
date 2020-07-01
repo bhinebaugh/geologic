@@ -49,6 +49,11 @@ li > dt:hover { overflow: visible; font-weight: bold; }
 }
 #all-eons {
 	display: flex;
+	align-items: center;
+}
+.timeline-unit {
+	height: 50px;
+	text-align: center;
 }
 #linear,
 #viewport {
@@ -177,9 +182,16 @@ li > dt:hover { overflow: visible; font-weight: bold; }
 .open-arrow { background-position: 0 -14px }
 dt {
 	box-shadow: 2px 4px 5px #5304;
+	padding: 0.4em 0.5em;
 }
 .era dt {
 	padding: 0.2em 
+}
+dd {
+	color: #444033;
+	font-size: 0.8em;
+	font-style: italic;
+	padding: 0.5em;
 }
 .transl {
 	color: #555;

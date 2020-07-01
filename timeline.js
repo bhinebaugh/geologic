@@ -59,8 +59,25 @@ const geohistory = new Set([
 	{
 		name: 'Proterozoic',
 		description: 'Fits and starts, culminating in the enigmatic Ediacaran life',
-		span: [2500,541]
-		// children: Paleo, Meso, Neo-proterozoic
+		span: [2500,541],
+		subdivisions: new Set([
+			// Eras of the Proterozoic
+			{
+				name: 'Paleoproterozoic',
+				description: '',
+				span: []
+			},
+			{
+				name: 'Mesoproterozoic',
+				description: '',
+				span: []
+			},
+			{
+				name: 'Neoproterozoic',
+				description: '',
+				span: []
+			}
+		])
 	},
 	{
 		name: 'Phanerozoic',
@@ -315,7 +332,7 @@ $(document).ready( function() {
 		}
 		return $d;
 	}
-	$("#alt").append(unpackEra(geohistory))
+	$("#main-list").append(unpackEra(geohistory))
 
 	// similarly construct horizontal ribbon
 	// just copy and repurpose ol?
@@ -325,7 +342,6 @@ $(document).ready( function() {
 		let d = document.createElement("div");
 		d.classList.add("timeline-unit", unit.name.toLowerCase());
 		d.style.flex = "1 1 " + (unit.span[0] - unit.span[1]) + "px";
-		d.style['height'] = '20px';
 		d.style.flexBasis = "5";
 		// .cssText("")
 		d.textContent = unit.name;
